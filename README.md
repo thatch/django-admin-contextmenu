@@ -43,7 +43,7 @@ Example usage in admin
     from contextmenu.options import CustomModelAdmin
 
 
-    @admin.register(Post)
+    @admin.register(ExampleModel)
     class ExampleAdmin(CustomModelAdmin):
 
         def get_contextmenu_items(self, obj):
