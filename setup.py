@@ -12,6 +12,7 @@ def get_version(package):
     init_py = open(os.path.join(package, '__init__.py')).read()
     return re.search('__version__ = [\'"]([^\'"]+)[\'"]', init_py).group(1)
 
+
 # use io.open until python2.7 support is dropped
 with io.open("README.md", encoding="utf8") as f:
     readme = f.read()
@@ -31,6 +32,9 @@ setup(
     author='Nima Shayanfar',
     author_email='nshayanfar@gmail.com',
     packages=['contextmenu'],
+    package_data={
+        '': ['**/**/*.html']
+    },
     python_requires='>=3.5',
     zip_safe=False,
     platforms='any',
