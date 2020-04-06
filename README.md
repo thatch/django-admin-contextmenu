@@ -56,3 +56,4 @@ Example usage in admin
                 {'title': 'Example link title', 'url': 'http://example.url'},
             ]
 ```
+
